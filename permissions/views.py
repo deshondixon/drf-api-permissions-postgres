@@ -1,6 +1,7 @@
 from rest_framework import generics
 from .serializers import permissionsSerializer
 from .models import permissions
+from .permissions import IsOwnerOrReadOnly
 
 
 class permissionsList(generics.ListCreateAPIView):
@@ -13,5 +14,6 @@ class permissionsList(generics.ListCreateAPIView):
 
 # The ThingDetail needs the same things
 class permissionsDetail(generics.RetrieveUpdateDestroyAPIView):
+    permission_classes = (IsOwnerOrReadOnly, )
     queryset = permissions.objects.all()
     serializer_class = permissionsSerializer
