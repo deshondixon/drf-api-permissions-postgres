@@ -13,15 +13,17 @@
 - To login
   - username: admin
   - password: 1234
-  
+
 
     http://127.0.0.1:8000/admin/
+    http://127.0.0.1:8000/api-auth/login/
 
 or
 #### Not secure
 
 
     http://0.0.0.0:8000/admin/
+    http://0.0.0.1:8000/api-auth/login/
 
 - Run in browser
 
