@@ -82,7 +82,7 @@ or:
 
     docker-compose run web bash
 
-User Acceptance Tests
+### User Acceptance Tests
 
 - Adjust any tests provided in demo to work with your project.
 
