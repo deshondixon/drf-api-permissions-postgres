@@ -7,6 +7,7 @@ class IsOwnerOrReadOnly(permissions.BasePermission):
     Object-level permission to only allow owners of an object to edit it.
     Assumes the model instance has an `owner` attribute.
     """
+
     def has_object_permission(self, request, view, obj):
         # HEAD is a request method supported by HTTP used by the World Wide Web.
         # The HEAD method asks for a response identical to that of a GET request,

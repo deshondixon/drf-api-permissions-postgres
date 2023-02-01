@@ -14,6 +14,6 @@ class permissionsList(generics.ListCreateAPIView):
 
 # The ThingDetail needs the same things
 class permissionsDetail(generics.RetrieveUpdateDestroyAPIView):
-    permission_classes = (IsOwnerOrReadOnly, )
+    permission_classes = (IsOwnerOrReadOnly,)
     queryset = permissions.objects.all()
     serializer_class = permissionsSerializer
