@@ -25,18 +25,25 @@ SECRET_KEY = "django-insecure-+12h-cvb++8tw@o^^ea9yrqbv2)w(^pp(al=6ys%&33o4flyv6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    # standard library
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+
+    # Third Party
+    'rest_framework',
+
+    # Local
+    'permissions',
 ]
 
 MIDDLEWARE = [
@@ -122,3 +129,10 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ]
+}

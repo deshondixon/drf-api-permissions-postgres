@@ -1,4 +1,5 @@
 from django.contrib import admin
-from .models import Permissions
+from .models import permissions
+
 # Register your models here.
-admin.site.register(Permissions)
+admin.site.register(permissions)

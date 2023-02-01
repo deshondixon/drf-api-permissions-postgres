@@ -6,8 +6,8 @@
 
 - To run Docker
 
-
-    python manage.py runserver 0.0.0.0:8000
+  - docker-compose run web bash
+  - python manage.py runserver 0.0.0.0:8000
 
 
 - To login
@@ -15,12 +15,18 @@
   - password: 1234
   
 
-    http://127.0.0.1:8000/admin
+    http://127.0.0.1:8000/admin/
+
+or
+#### Not secure
+
+
+    http://0.0.0.0:8000/admin/
 
 - Run in browser
 
 
-    http://0.0.0.0:8000/api/v1/myapi/
+    http://0.0.0.0:8000/api/v1/permissions/
 
 ## Overview
 
